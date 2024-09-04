@@ -1,55 +1,25 @@
 {% extends "layouts/main.html" %}
 
-{% block pageTitle %}
-GOV.UK Prototype Kit
-{% endblock %}
+{% set pageName="Home" %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
+  <div class="govuk-grid-column-two-thirds">
 
-        <div class="govuk-width-container">
-            <main class="govuk-main-wrapper">
-              <div class="govuk-grid-row">
+    {% include "govuk-prototype-kit/includes/homepage-top.njk" %}
 
-                <h1 class="govuk-heading-xl">PIP Appointee prototypes</h1>
-
-                <div class="govuk-grid-column-one-third">
-                  <h2 class="govuk-heading-m">Prototype for appointees</h2>
-                  <p class="govuk-body">Prototype to test with appointees in September 2024</p>
-                  <a href="apply-for-pip/welcome" class="govuk-button govuk-button">View</a>
-                </div>
-
-                
-              <div class="govuk-grid-column-one-third">
-                    <h2 class="govuk-heading-m">Agent UI</h2>
-                    <p class="govuk-body">Prototype to test with agents for appointees</p>
-                    <a href="agent-ui/search.html" class="govuk-button govuk-button">View</a>
-                  </div>
-
-                  <div class="govuk-grid-column-one-third">
-                    <h2 class="govuk-heading-m">Check or send 'Apply for PIP' invitation emails</h2>
-                    <p class="govuk-body">Prototype to test April 2025</p>
-                    <a href="invited-digital-index" class="govuk-button govuk-button">View</a>
-                  </div>
-
-                
-
-              <!--    <div class="govuk-grid-column-one-third">
-                    <h2 class="govuk-heading-m">End to End Journey (WIP)</h2>
-                    <p class="govuk-body">Prototype showing the end to end PIP Apply journey</p>
-                    <a href="apply-for-pip/govuk/how-to-claim" class="govuk-button govuk-button">View</a>
-                  </div> -->
-              </div>
-            </main>
-          </div>
+    <h1 class="govuk-heading-xl">
+      {{ serviceName }}
+    </h1>
 
 
-
-    </div> <!-- govuk-grid-column-full -->
-</div> <!-- govuk-grid-row -->
-
-
+      {{ govukButton({
+          text: "Continue",
+          href: "example/where-do-you-live"
+        }) }}
+    {% include "govuk-prototype-kit/includes/homepage-bottom.njk" %}
+  </div>
+</div>
 
 {% endblock %}
