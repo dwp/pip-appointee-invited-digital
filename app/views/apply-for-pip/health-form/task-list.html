@@ -27,37 +27,39 @@
       </div> -->
 
       <h1 class="govuk-heading-l" style="margin-bottom: 40px;">
-        Tell us how your health condition or disability affects you
+        Tell us how James' health condition or disability affects them
       </h1>
 
       <p class="govuk-heading">Download and read the instructions <a href="/public/pdfs/pip2-info-booklet-v1.pdf" download>Help with answering questions and providing evidence (PDF)</a></p>
 
-      <p>You can download a copy of your completed application when you've finished.</p>
+      <p>You can download a copy of the completed application when you've finished.</p>
+
+     
 
       <ol class="app-task-list">
         <li>
           <h2 class="app-task-list__section">
-            <span class="app-task-list__section-number">1. </span> Tell us about your health
+            <span class="app-task-list__section-number">1. </span> Tell us about their health
           </h2>
           <ul class="app-task-list__items govuk-!-margin-bottom-7">
             <li class="app-task-list__item">
               {% if sectionStatus.aboutyourhealth === "completed" %}
                 <a class="app-task-list__task-name " href="/apply-for-pip/health-form/about-your-health/check">
-                  About your health
+                  About their health
                   <span>
                     <strong class="govuk-tag app-task-list__task-completed" id="aboutyourhealth">Completed</strong>
                   </span>
                 </a>
                 {% elif sectionStatus.aboutyourhealth === "inprogress" %}
                 <a class="app-task-list__task-name " href="/apply-for-pip/health-form/about-your-health/condition">
-                  About your health
+                  About their health
                   <span>
                     <strong class="govuk-tag govuk-tag--blue app-task-list__task-completed" id="aboutyourhealth">Not complete</strong>
                   </span>
                 </a>
                 {% else %}
                 <a class="app-task-list__task-name " href="/apply-for-pip/health-form/about-your-health/condition">
-                  About your health
+                  About their health
                   <span>
                     <strong class="govuk-tag govuk-tag--grey app-task-list__task-completed" id="aboutyourhealth">Not started</strong>
                   </span>
@@ -65,43 +67,35 @@
               {% endif %}
             </li>
             <li class="app-task-list__item">
-                <a class="app-task-list__task-name " href="/apply-for-pip/health-form/about-your-health-professionals/check">
-                  About your health or care professionals
-                  <span>
-                    <strong class="govuk-tag app-task-list__task-completed" id="aboutyourhealthprofessionals">Completed</strong>
-                  </span>
-                </a>
-            </li>
-            <!-- <li class="app-task-list__item">
               {% if sectionStatus.aboutyourhealthprofessionals === "completed" %}
                 <a class="app-task-list__task-name " href="/apply-for-pip/health-form/about-your-health-professionals/check">
-                  About your health or care professionals
+                  About their health or care professionals
                   <span>
                     <strong class="govuk-tag app-task-list__task-completed" id="aboutyourhealthprofessionals">Completed</strong>
                   </span>
                 </a>
                 {% elif sectionStatus.aboutyourhealthprofessionals === "inprogress" %}
                 <a class="app-task-list__task-name " href="/apply-for-pip/health-form/about-your-health-professionals/check">
-                  About your health or care professionals
+                  About their health or care professionals
                   <span>
                     <strong class="govuk-tag govuk-tag--blue app-task-list__task-completed" id="aboutyourhealthprofessionals">Not complete</strong>
                   </span>
                 </a>
                 {% else %}
                 <a class="app-task-list__task-name " href="/apply-for-pip/health-form/about-your-health-professionals/introduction">
-                  About your health or care professionals
+                  About their health or care professionals
                   <span>
                     <strong class="govuk-tag govuk-tag--grey app-task-list__task-completed" id="aboutyourhealthprofessionals">Not started</strong>
                   </span>
                 </a>
               {% endif %}
-            </li> -->
+            </li>
           </ul>
         </li>
         {# Daily living activities #}
         <li>
           <h2 class="app-task-list__section">
-            <span class="app-task-list__section-number">2. </span> Tell us about your daily living activities
+            <span class="app-task-list__section-number">2. </span> Tell us about their daily living activities
           </h2>
           <ul class="app-task-list__items govuk-!-margin-bottom-7">
             <li class="app-task-list__item">
@@ -349,7 +343,7 @@
         {# Mobility activities #}
         <li>
           <h2 class="app-task-list__section">
-            <span class="app-task-list__section-number">3. </span> Tell us about your mobility activities
+            <span class="app-task-list__section-number">3. </span> Tell us about their mobility activities
           </h2>
           <ul class="app-task-list__items govuk-!-margin-bottom-7">
             <li class="app-task-list__item">
@@ -456,7 +450,7 @@
                 sectionStatus.movingaround === "completed" and
                 sectionStatus.additionalinformation === "completed"
               %}
-                <a class="app-task-list__task-name " href="/apply-for-pip/health-form/supporting-evidence">
+                <a class="app-task-list__task-name " href="/apply-for-pip/health-form/supporting-evidence/supporting-evidence">
                  Upload supporting evidence and apply
                   <span>
                     <strong class="govuk-tag govuk-tag--grey app-task-list__task-completed" id="uploadsupportingevidenceandapply">Not started</strong>
@@ -464,13 +458,16 @@
                 </a>
               {% else %}
                 <span class="app-task-list__task-name">
-                  <span style="width: 70%; display: inline-block;">Submit your application</span>
+                  <span style="width: 70%; display: inline-block;">Submit the application</span>
                   <span>
                     <strong class="govuk-tag govuk-tag--grey app-task-list__task-completed" id="uploadsupportingevidenceandapply">Do this last</strong>
                   </span>
                 </span>
+                
               {% endif %}
             </li>
+            <br>
+            <a href="../health-form/complete-task-list.html" >Completed task list</a></p>
           </ul>
         </li>
       </ol>
