@@ -1043,6 +1043,274 @@ router.post('/apply-for-pip/health-form/supporting-evidence/supporting-evidence-
     res.redirect('/apply-for-pip/health-form/declaration');
 });
 
+// PIP2 HEALTH INFORMATION GATHER V2
+
+router.post('/apply-for-pip-v2/health-form/about-your-health/condition', (req, res, next) => {
+  res.redirect('/apply-for-pip-v2/health-form/about-your-health/condition-details');
+});
+
+
+router.post('/apply-for-pip-v2/health-form/about-your-health/condition-details', (req, res, next) => {
+  res.redirect('/apply-for-pip-v2/health-form/about-your-health/another');
+});
+
+router.post('/apply-for-pip-v2/health-form/about-your-health/another', (req, res, next) => {
+      const condition2 = req.session.data['condition2'];
+        if (condition2 === 'Yes') {
+          res.redirect('/apply-for-pip-v2/health-form/about-your-health/condition2');
+      } else {
+          res.redirect('/apply-for-pip-v2/health-form/about-your-health/check');
+      }
+});
+
+router.post('/apply-for-pip-v2/health-form/about-your-health/condition2', (req, res, next) => {
+  res.redirect('/apply-for-pip-v2/health-form/about-your-health/condition-details-2');
+});
+
+router.post('/apply-for-pip-v2/health-form/about-your-health/condition-details-2', (req, res, next) => {
+  res.redirect('/apply-for-pip-v2/health-form/about-your-health/another-2');
+});
+
+router.post('/apply-for-pip-v2/health-form/about-your-health/another-2', (req, res, next) => {
+  res.redirect('/apply-for-pip-v2/health-form/about-your-health/check');
+});
+
+
+router.post('/apply-for-pip-v2/health-form/about-your-health-professionals/introduction', (req, res, next) => {
+  res.redirect('/apply-for-pip-v2/health-form/about-your-health-professionals/health-professional-question');
+});
+
+router.post('/apply-for-pip-v2/health-form/about-your-health-professionals/health-professional-question', (req, res, next) => {
+      const question = req.session.data['question'];
+        if (question === 'Yes') {
+          res.redirect('/apply-for-pip-v2/health-form/about-your-health-professionals/health-professional');
+      } else {
+          res.redirect('/apply-for-pip-v2/health-form/about-your-health-professionals/check');
+      }
+});
+
+router.post('/apply-for-pip-v2/health-form/about-your-health-professionals/health-professional', (req, res, next) => {
+  res.redirect('/apply-for-pip-v2/health-form/about-your-health-professionals/check');
+});
+
+router.post('/apply-for-pip-v2/health-form/preparing-food/intro', (req, res, next) => {
+    const preparingfoodQuestion = req.session.data['preparingfood-question'];
+      if (preparingfoodQuestion === 'Yes') {
+        res.redirect('/apply-for-pip-v2/health-form/preparing-food/details');
+    } else {
+        res.redirect('/apply-for-pip-v2/health-form/preparing-food/check');
+    }
+});
+
+router.post('/apply-for-pip-v2/health-form/preparing-food/details', (req, res, next) => {
+  res.redirect('/apply-for-pip-v2/health-form/preparing-food/check');
+});
+
+router.post('/apply-for-pip-v2/health-form/eating-and-drinking/intro', (req, res, next) => {
+    const eatinganddrinkingQuestion = req.session.data['eatinganddrinking-question'];
+      if (eatinganddrinkingQuestion === 'Yes') {
+        res.redirect('/apply-for-pip-v2/health-form/eating-and-drinking/feeding-tube');
+    } else {
+        res.redirect('/apply-for-pip-v2/health-form/eating-and-drinking/check');
+    }
+});
+
+router.post('/apply-for-pip-v2/health-form/eating-and-drinking/feeding-tube', (req, res, next) => {
+  res.redirect('/apply-for-pip-v2/health-form/eating-and-drinking/details');
+});
+
+router.post('/apply-for-pip-v2/health-form/eating-and-drinking/details', (req, res, next) => {
+  res.redirect('/apply-for-pip-v2/health-form/eating-and-drinking/check');
+});
+
+router.post('/apply-for-pip-v2/health-form/managing-treatments/intro', (req, res, next) => {
+    const managingtreatmentsQuestion = req.session.data['managingtreatments-question'];
+      if (managingtreatmentsQuestion === 'Yes') {
+        res.redirect('/apply-for-pip-v2/health-form/managing-treatments/details');
+    } else {
+        res.redirect('/apply-for-pip-v2/health-form/managing-treatments/check');
+    }
+});
+
+router.post('/apply-for-pip-v2/health-form/managing-treatments/details', (req, res, next) => {
+  res.redirect('/apply-for-pip-v2/health-form/managing-treatments/therapies');
+});
+
+router.post('/apply-for-pip-v2/health-form/managing-treatments/therapies', (req, res, next) => {
+  res.redirect('/apply-for-pip-v2/health-form/managing-treatments/check');
+});
+
+router.post('/apply-for-pip-v2/health-form/washing-and-bathing/intro', (req, res, next) => {
+    const washingandbathingQuestion = req.session.data['washingandbathing-question'];
+      if (washingandbathingQuestion === 'Yes') {
+        res.redirect('/apply-for-pip-v2/health-form/washing-and-bathing/details');
+    } else {
+        res.redirect('/apply-for-pip-v2/health-form/washing-and-bathing/check');
+    }
+});
+
+router.post('/apply-for-pip-v2/health-form/washing-and-bathing/details', (req, res, next) => {
+  res.redirect('/apply-for-pip-v2/health-form/washing-and-bathing/check');
+});
+
+router.post('/apply-for-pip-v2/health-form/managing-toilet-needs/intro', (req, res, next) => {
+    const managingtoiletneedsQuestion = req.session.data['managingtoiletneeds-question'];
+      if (managingtoiletneedsQuestion === 'Yes') {
+        res.redirect('/apply-for-pip-v2/health-form/managing-toilet-needs/details');
+    } else {
+        res.redirect('/apply-for-pip-v2/health-form/managing-toilet-needs/check');
+    }
+});
+
+router.post('/apply-for-pip-v2/health-form/managing-toilet-needs/details', (req, res, next) => {
+  res.redirect('/apply-for-pip-v2/health-form/managing-toilet-needs/check');
+});
+
+router.post('/apply-for-pip-v2/health-form/dressing-and-undressing/intro', (req, res, next) => {
+    const dressingandundressingQuestion = req.session.data['dressingandundressing-question'];
+      if (dressingandundressingQuestion === 'Yes') {
+        res.redirect('/apply-for-pip-v2/health-form/dressing-and-undressing/details');
+    } else {
+        res.redirect('/apply-for-pip-v2/health-form/dressing-and-undressing/check');
+    }
+});
+
+router.post('/apply-for-pip-v2/health-form/dressing-and-undressing/details', (req, res, next) => {
+  res.redirect('/apply-for-pip-v2/health-form/dressing-and-undressing/check');
+});
+
+router.post('/apply-for-pip-v2/health-form/talking-and-listening/intro', (req, res, next) => {
+    const talkingandlisteningQuestion = req.session.data['talkingandlistening-question'];
+      if (talkingandlisteningQuestion === 'Yes') {
+        res.redirect('/apply-for-pip-v2/health-form/talking-and-listening/details');
+    } else {
+        res.redirect('/apply-for-pip-v2/health-form/talking-and-listening/check');
+    }
+});
+
+router.post('/apply-for-pip-v2/health-form/talking-and-listening/details', (req, res, next) => {
+  res.redirect('/apply-for-pip-v2/health-form/talking-and-listening/check');
+});
+
+router.post('/apply-for-pip-v2/health-form/reading/intro', (req, res, next) => {
+    const readingQuestion = req.session.data['reading-question'];
+      if (readingQuestion === 'Yes') {
+        res.redirect('/apply-for-pip-v2/health-form/reading/details');
+    } else {
+        res.redirect('/apply-for-pip-v2/health-form/reading/check');
+    }
+});
+
+router.post('/apply-for-pip-v2/health-form/reading/details', (req, res, next) => {
+  res.redirect('/apply-for-pip-v2/health-form/reading/check');
+});
+
+router.post('/apply-for-pip-v2/health-form/mixing-with-other-people/intro', (req, res, next) => {
+    const mixingwithotherpeopleQuestion = req.session.data['mixingwithotherpeople-question'];
+      if (mixingwithotherpeopleQuestion === 'Yes') {
+        res.redirect('/apply-for-pip-v2/health-form/mixing-with-other-people/details');
+    } else {
+        res.redirect('/apply-for-pip-v2/health-form/mixing-with-other-people/check');
+    }
+});
+
+router.post('/apply-for-pip-v2/health-form/mixing-with-other-people/details', (req, res, next) => {
+  res.redirect('/apply-for-pip-v2/health-form/mixing-with-other-people/check');
+});
+
+router.post('/apply-for-pip-v2/health-form/managing-money/intro', (req, res, next) => {
+    const managingmoneyQuestion = req.session.data['managingmoney-question'];
+      if (managingmoneyQuestion === 'Yes') {
+        res.redirect('/apply-for-pip-v2/health-form/managing-money/details');
+    } else {
+        res.redirect('/apply-for-pip-v2/health-form/managing-money/check');
+    }
+});
+
+router.post('/apply-for-pip-v2/health-form/managing-money/details', (req, res, next) => {
+  res.redirect('/apply-for-pip-v2/health-form/managing-money/check');
+});
+
+router.post('/apply-for-pip-v2/health-form/planning-and-following-a-journey/intro', (req, res, next) => {
+    const planningandfollowingajourneyQuestion = req.session.data['planningandfollowingajourney-question'];
+      if (planningandfollowingajourneyQuestion === 'Yes') {
+        res.redirect('/apply-for-pip-v2/health-form/planning-and-following-a-journey/details');
+    } else {
+        res.redirect('/apply-for-pip-v2/health-form/planning-and-following-a-journey/check');
+    }
+});
+
+router.post('/apply-for-pip-v2/health-form/planning-and-following-a-journey/details', (req, res, next) => {
+  res.redirect('/apply-for-pip-v2/health-form/planning-and-following-a-journey/check');
+});
+
+router.post('/apply-for-pip-v2/health-form/moving-around/intro', (req, res, next) => {
+    const movingaroundQuestion = req.session.data['movingaround-question'];
+      if (movingaroundQuestion === 'Yes') {
+        res.redirect('/apply-for-pip-v2/health-form/moving-around/info');
+    } else {
+        res.redirect('/apply-for-pip-v2/health-form/moving-around/check');
+    }
+});
+
+router.post('/apply-for-pip-v2/health-form/moving-around/info', (req, res, next) => {
+    const movingaroundInfo = req.session.data['movingaround-info'];
+      if (movingaroundInfo === 'It varies') {
+        res.redirect('/apply-for-pip-v2/health-form/moving-around/varies');
+    } else {
+        res.redirect('/apply-for-pip-v2/health-form/moving-around/details');
+    }
+});
+
+router.post('/apply-for-pip-v2/health-form/moving-around/varies', (req, res, next) => {
+  res.redirect('/apply-for-pip-v2/health-form/moving-around/details');
+});
+
+
+router.post('/apply-for-pip-v2/health-form/moving-around/details', (req, res, next) => {
+  res.redirect('/apply-for-pip-v2/health-form/moving-around/check');
+});
+
+router.post('/apply-for-pip-v2/health-form/additional-information/intro', (req, res, next) => {
+    const additionalinformationQuestion = req.session.data['additionalinformation-question'];
+      if (additionalinformationQuestion === 'Yes') {
+        res.redirect('/apply-for-pip-v2/health-form/additional-information/details');
+    } else {
+        res.redirect('/apply-for-pip-v2/health-form/additional-information/check');
+    }
+});
+
+router.post('/apply-for-pip-v2/health-form/additional-information/details', (req, res, next) => {
+  res.redirect('/apply-for-pip-v2/health-form/additional-information/check');
+});
+
+router.post('/apply-for-pip-v2/health-form/supporting-evidence/intro', (req, res, next) => {
+  res.redirect('/apply-for-pip-v2/health-form/supporting-evidence/supporting-evidence');
+});
+
+router.post('/apply-for-pip-v2/health-form/supporting-evidence/supporting-evidence', (req, res, next) => {
+    const question = req.session.data['question'];
+      if (question === 'yes') {
+        res.redirect('/apply-for-pip-v2/health-form/supporting-evidence/supporting-evidence-upload-1');
+    } else {
+        res.redirect('/apply-for-pip-v2/health-form/declaration');
+    }
+});
+
+router.post('/apply-for-pip-v2/health-form/supporting-evidence/supporting-evidence-uploaded-1', (req, res, next) => {
+    const question = req.session.data['question'];
+      if (question === 'yes') {
+        res.redirect('/apply-for-pip-v2/health-form/supporting-evidence/supporting-evidence-upload-2');
+    } else {
+        res.redirect('/apply-for-pip-v2/health-form/declaration');
+    }
+});
+
+router.post('/apply-for-pip-v2/health-form/supporting-evidence/supporting-evidence-uploaded-2', (req, res, next) => {
+  res.redirect('/apply-for-pip-v2/health-form/declaration');
+});
+
+
 // ONLINE IDENTIFICTAION
 
 // router.post('/apply-for-pip/oidv/check-identity', (req, res, next) => {
