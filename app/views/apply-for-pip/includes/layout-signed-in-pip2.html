@@ -42,13 +42,13 @@
     {% include "includes/cookie-banner.html" %}
     {{ govukHeader({
       serviceName: serviceName,
-      serviceUrl: "list-1"
+      serviceUrl: "/index.html"
     }) }}
   {% else %}
     {% include "includes/cookie-banner.html" %}
     {{ govukHeader({
       serviceName: serviceName,
-      serviceUrl: "list-1",
+      serviceUrl: "/index.html",
       navigation: [
         {
           href: "/apply-for-pip/health-form/help",
