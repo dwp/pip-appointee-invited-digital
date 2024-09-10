@@ -11,32 +11,42 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <div class="govuk-inset-text">    <p>You are viewing version A of this page. <a href="../about-your-health/condition-details-b" > Show version B</a> </p></div>
-  
+    <div class="govuk-inset-text">    <p>You are viewing version B of this page. <a href="../about-your-health/condition-details" > Show version A</a> </p></div>
+
     <form action="#" method="post" novalidate>
+      
+      <h1 class="govuk-heading-l"> About this condition or disability</h1>
+         <p>Tell us about:</p>
+        
 
       {{ govukTextarea({
-        name: "condition-detail-1",
-        id: "condition-detail-1",
-        rows: "18",
+        id: 'condition-detail-2',
+        name: 'condition-detail-2',
         label: {
-          text: "About this condition or disability" + data['conditions'][0]['condition_name'] | lower,
-          isPageHeading: true,
-        classes: "govuk-label--l"
-        },
-        hint: {
-          html: "<p>Tell us about:</p>
-          <ul class='govuk-list govuk-list--bullet'>
-            <li>
-              tablets or other medication they are taking or will be taking and the dosage
-            </li>
-            <li>
-              any treatments they have had, are currently having or have planned for the future (include private as well as NHS funded treatments)</li>
-            <li>any side effects these have on them</li>
-          </ul>"
+          html: 'Tablets or other medication they are taking or will be taking and the dosage',
+          classes: 'govuk-!-font-weight-bold'
         }
+      
       }) }}
-
+      {{ govukTextarea({
+        id: 'condition-detail-3',
+        name: 'condition-detail-3',
+        label: {
+          html: 'Any treatments they have had, are currently having or have planned for the future (include private as well as NHS funded treatments)',
+          classes: 'govuk-!-font-weight-bold'
+        }
+      
+      }) }}
+   
+      {{ govukTextarea({
+        id: 'condition-detail-3',
+        name: 'condition-detail-3',
+        label: {
+          html: 'Any side effects this has had on them',
+          classes: 'govuk-!-font-weight-bold'
+        }
+      
+      }) }}
       <!-- <div class="govuk-form-group">
         <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="condition-start-date">
           Approximate start date?

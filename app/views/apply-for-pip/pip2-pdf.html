@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+
+{% set pageTitle = "Help with answering questions and providing evidence (PDF)" %}
+
+{% block pageTitle %}
+  {{ pageTitle }}
+{% endblock %}
+
+{% block header %}
+<p style="padding: 20px; margin: 0"><strong>Subject:</strong> {{ pageTitle }}</p>
+  {% include "includes/cookie-banner.html" %}
+  {# Set serviceName in config.js. #}
+  {{ govukHeader({
+    homepageUrl: "/",
+    serviceName: &nbsp;,
+    serviceUrl: "/",
+    containerClasses: "notify-width-container-border"
+  }) }}
+{% endblock %}
+
+{% block beforeContent %}
+<div class="notify-width-container"><div class="govuk-grid-row">
+  <div class="govuk-grid-column-full sans">{% include "apply-for-pip/includes/back-link.html" %}</div> </div></div>
+
+{% endblock %}
+{% block content %}
+
+<div class="notify-width-container">
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full sans">
+    <!--<h2 class="govuk-heading-m">When you need to do it by</h2>
+
+      <p>Please answer all the questions and upload any evidence you have by: <br>
+       <b>15 October 2024 </b> </p>
+
+      <p>If you miss this date, we may end this PIP claim. If you need more time to complete, 
+        let us know. </p>
+       -->  
+        <h1 class="govuk-heading-xl govuk-!-font-weight-regular">Personal Independence <br> Payment </h1>
+        <h1 class="govuk-heading-l">How your disability affects you -<br> Information Booklet </h1>
+   <br>
+     <h2 class="govuk-heading-m">This information booklet will help you fill in the online<br> claim form</h2>
+
+     <p>In it we:
+      <ul class="govuk-list govuk-list--bullet">
+        <li>explain the questions we ask </li>
+          <li>tell you how to answer the questions</li>
+          <li>give you examples of other things you can tell us</li>
+          <li>tell you what you need to do next</li>
+          </ul>
+          <br>
+      <br>
+      <br>
+      <br>
+      <br>
+<br>
+<br>
+<br>
+<h2 class="govuk-heading-m">Things to do before you fill in the online form</h2>
+<p> If you think you will need help to prepare for and fill in this Personal <br> Inepdependance Payment (PIP) claim form, you may want to ask a family <br> member, carer or support worker to read this help booklet.</p>
+
+    </div>{# /govuk-grid-column-two-thirds #}
+
+  </div>{# /govuk-grid-row #}
+
+</div>{# /notify-width-container #}
+
+{% endblock %}
+{% block footer %}
+{% endblock %}
