@@ -16,37 +16,64 @@
     <form action="#" method="post" novalidate>
       
       <h1 class="govuk-heading-l"> About this condition or disability</h1>
-         <p>Tell us about:</p>
         
+      <h1 class="govuk-heading-m"> Tablets and medication</h1>
 
-      {{ govukTextarea({
-        id: 'condition-detail-2',
-        name: 'condition-detail-2',
-        label: {
-          html: 'Tablets or other medication they are taking or will be taking and the dosage',
-          classes: 'govuk-!-font-weight-bold'
-        }
-      
-      }) }}
-      {{ govukTextarea({
-        id: 'condition-detail-3',
-        name: 'condition-detail-3',
-        label: {
-          html: 'Any treatments they have had, are currently having or have planned for the future (include private as well as NHS funded treatments)',
-          classes: 'govuk-!-font-weight-bold'
-        }
-      
-      }) }}
+     
+        {{ govukTextarea({
+          id: 'condition-name-2',
+          name: 'condition-name-2',
+          label: {
+            html: 'What tablets or other medication do they take or plan to take 
+            and the dosage?',
+            classes: 'govuk-!-font-weight-bold'
+          },
+          hint: {
+            text: "For example, co-codamol, 8mg, 3 times a day."
+          }
+        }) }}
+
+        {{ govukTextarea({
+          id: 'condition-name-3',
+          name: 'condition-name-3',
+          label: {
+            html: 'Do they experience any side effects?',
+            classes: 'govuk-!-font-weight-bold'
+          },
+          hint: {
+            
+          }
+        }) }}
+<br>
+<h1 class="govuk-heading-m"> Treatments</h1>
+{{ govukTextarea({
+  id: 'condition-name-4',
+  name: 'condition-name-4',
+  label: {
+    html: 'What treatments have they had, currently are having or have 
+    planned for the future?',
+    classes: 'govuk-!-font-weight-bold'
+  },
+  hint: {
+    text: "Include private and NHS funded treatments."
+  }
+}) }}
    
-      {{ govukTextarea({
-        id: 'condition-detail-3',
-        name: 'condition-detail-3',
-        label: {
-          html: 'Any side effects this has had on them',
-          classes: 'govuk-!-font-weight-bold'
-        }
-      
-      }) }}
+{{ govukTextarea({
+  id: 'condition-name-3',
+  name: 'condition-name-3',
+  label: {
+    html: 'Do they experience any side effects?',
+    classes: 'govuk-!-font-weight-bold'
+  },
+  hint: {
+    
+  }
+}) }}
+
+<button type="submit" disabled aria-disabled="true" class="govuk-button" data-module="govuk-button">
+  Save and continue
+</button>
       <!-- <div class="govuk-form-group">
         <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="condition-start-date">
           Approximate start date?
@@ -58,13 +85,12 @@
         <input class="govuk-input" id="condition-start-date" name="condition-start-date" type="text" aria-describedby="condition-start-date-hint">
       </div>
  -->
-      {{ govukButton({
-        text: 'Save and continue'
-      }) }}
+<!--        text: 'Save and continue'
+      }) }} -->
 
     </form>
-
-    {% include "./_return-link.html" %}
+    {% include "apply-for-pip/includes/back-link.html" %}
+    
 
   </div>{# /govuk-grid-column-two-thirds #}
 </div>{# /govuk-grid-row #}
