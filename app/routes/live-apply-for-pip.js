@@ -821,10 +821,24 @@ router.post('/apply-for-pip/health-form/about-your-health-professionals/health-p
             res.redirect('/apply-for-pip/health-form/about-your-health-professionals/check');
         }
 });
-
 router.post('/apply-for-pip/health-form/about-your-health-professionals/health-professional', (req, res, next) => {
-    res.redirect('/apply-for-pip/health-form/about-your-health-professionals/check');
+  res.redirect('/apply-for-pip/health-form/about-your-health-professionals/another');
 });
+
+router.post('/apply-for-pip/health-form/about-your-health-professionals/another', (req, res, next) => {
+      const professional2 = req.session.data['professional2'];
+        if (professional2 === 'Yes') {
+          res.redirect('/apply-for-pip/health-form/about-your-health-professionals/health-professional-2');
+      } else {
+          res.redirect('/apply-for-pip/health-form/about-your-health-professionals/check');
+      }
+});
+
+router.post('/apply-for-pip/health-form/about-your-health-professionals/health-professional-2', (req, res, next) => {
+  res.redirect('/apply-for-pip/health-form/about-your-health-professionals/another');
+});
+
+
 
 router.post('/apply-for-pip/health-form/preparing-food/intro', (req, res, next) => {
       const preparingfoodQuestion = req.session.data['preparingfood-question'];
