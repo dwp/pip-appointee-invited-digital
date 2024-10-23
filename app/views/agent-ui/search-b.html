@@ -1,0 +1,46 @@
+{% set pageTitle = "What health conditions or disabilities do you have?" %}
+
+{% extends "apply-for-pip/includes/layout-signed-in-pip2.html" %}
+
+{% block beforeContent %}
+  {% include "apply-for-pip/includes/phase-banner.html" %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="#" method="post" novalidate>
+
+      {% call govukFieldset({
+        classes: 'moj-add-another__item',
+        legend: {
+          text: "Search for a claimant's 
+national insurance number
+",
+          classes: "govuk-fieldset__legend--l",
+          isPageHeading: true
+        }
+      }) %}
+
+
+      {{ govukInput({
+        id: 'condition-name-1',
+        name: 'condition-name-1'
+      }) }}
+
+
+      {% endcall %}
+
+      <a href="details-record.html" class="govuk-button">Continue</a>
+
+    </form>
+
+ 
+
+
+  </div>{# /govuk-grid-column-two-thirds #}
+</div>{# /govuk-grid-row #}
+
+{% endblock %}
