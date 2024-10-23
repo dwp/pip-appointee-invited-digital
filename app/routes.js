@@ -27,6 +27,7 @@ console.log('folder : ' + res.locals.folder + ', subfolder : ' + res.locals.subf
 });
 // ROUTES REDIRECT START
 const applyforpiplive = require('./routes/live-apply-for-pip.js')
+const agentui = require('./routes/agent-ui.js')
 const poc = require('./routes/poc.js')
 const v01 = require('./routes/v0-1.js')
 const v02 = require('./routes/v0-2.js')
@@ -92,6 +93,7 @@ const eligibility = require('./routes/eligibility.js')
 
 // ROUTER LIST START
 applyforpiplive(router);
+agentui(router);
 poc(router);
 v01(router);
 v02(router);
