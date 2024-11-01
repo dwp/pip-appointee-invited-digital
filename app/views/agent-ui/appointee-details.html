@@ -24,7 +24,15 @@
       }) %}
 <br>
 
-
+{{ govukErrorSummary({
+  titleText: "There is a problem",
+  errorList: [
+    {
+      text: "Enter a different email address as this one is already in use.",
+      href: "#"
+    }
+  ]
+}) }}
       {{ govukInput({
         id: 'appointee-first-name',
         name: 'appointee-first-name',
@@ -60,6 +68,10 @@
           classes: 'govuk-!-font-weight-bold'
         },        hint: {
           text: "This is the email address the PIP2 invite will be sent to."
+        }, id: "appointee-email",
+        name: "appointee-email",
+        errorMessage: {
+          text: "Enter a different email address as this one is already in use."
         }
       }) }}
 
