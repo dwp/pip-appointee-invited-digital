@@ -24,19 +24,25 @@
             classes: "govuk-fieldset__legend--l"
           }
         },
- 
+
         items: [
-          {
-            value: "PAB",
-            text: "Personal Acting Body (PAB)",
-            checked: checked("appointee-question", "Yes")
-          },
-          {
-            value: "CAB",
-            text: "Corporate Acting Body (CAB)",
-            checked: checked("appointee-question", "No")
+        {
+          value: "PAB",
+          text: "Personal Acting Body (PAB)",
+          checked: checked("appointee-question", "Yes"),
+          hint: {
+            text: "An individual, for example a friend or relative"
           }
-        ]
+        },
+        {
+          value: "govuk-one-login",
+          text: "Corporate Acting Body (CAB)",
+          checked: checked("appointee-question", "No"),
+          hint: {
+            text: "An organisation or representative of an organisation, for example a solicitor or local council"
+          }
+        }
+      ]
       }) }}
 
       <a href="claimant-details.html" class="govuk-button">Continue</a>
