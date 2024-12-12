@@ -1,4 +1,3 @@
-{% extends "layout-live-pip2-v1-0.html" %}
 
 {% extends "apply-for-pip/includes/layout-signed-in-pip2.html" %}
 
@@ -20,16 +19,14 @@
         rows: "18",
         value: data['additionalinformation-details'],
         label: {
-          text: "Additional information",
-          isPageHeading: true,
-          classes: "govuk-label--l"
+        text: "Additional information",
+        isPageHeading: true,
+        classes: "govuk-label--l"
         },
         hint: {
-          html: '
-          <p>Tell us anything else you think we should know about how James health condition or disability affects them</p>
-          '
+        html: "<p>Tell us anything else you think we should know about how James's health condition or disability affects them.</p>"
         }
-      }) }}
+        }) }}
 
       <div class="moj-button-action">
         {{ govukButton({
