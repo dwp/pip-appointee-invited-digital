@@ -13,67 +13,11 @@
 
     <h1 class="govuk-heading-l">Check your answers: about their health or care professionals</h1>
 
-    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
 
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Are there any health or care professionals you would like to tell us about
-        </dt>
-        <dd class="govuk-summary-list__value">
-          {{ data['health-hcps'] }}
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="#">
-            Change<span class="govuk-visually-hidden"> health and care professional consent</span>
-          </a>
-        </dd
-        </div>
-
-    </dl>
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-full">
-    
-        <div class="govuk-summary-card">
-          <div class="govuk-summary-card__title-wrapper">
-            <h2 class="govuk-summary-card__title">{{ data['condition-name-1'] | capitalize }}</h2>
-            <ul class="govuk-summary-card__actions">
-              <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">
-                  Remove<span class="govuk-visually-hidden"> {{ data['hcp-1-name'] }}</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="govuk-summary-card__content">
-            <dl class="govuk-summary-list">
-              <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                  Details
-                </dt>
-                <dd class="govuk-summary-list__value">
-          
-                </dd>
-                <dd class="govuk-summary-list__actions">
-                  <a class="govuk-link" href="./condition">
-                    Change<span class="govuk-visually-hidden"> condition or disability</span>
-                  </a>
-                </dd>
-              </div>
-            
-      
-              </div>
-            </dl>
-          </div>
-        </div>
-
-    {% if data['health-hcps'] === 'Yes' %}
     <div class="govuk-summary-card">
       <div class="govuk-summary-card__title-wrapper">
-        <h2 class="govuk-summary-card__title">{{ data['hcp-1-name'] }}</h2>
+        <h2 class="govuk-summary-card__title"> Doctor {{ data['condition-name-1'] | capitalize }}</h2>  
         <ul class="govuk-summary-card__actions">
-          <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">
-              Change<span class="govuk-visually-hidden"> of {{ data['hcp-1-name'] }}</span>
-            </a>
-          </li>
           <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">
               Remove<span class="govuk-visually-hidden"> {{ data['hcp-1-name'] }}</span>
             </a>
@@ -87,23 +31,13 @@
               Name
             </dt>
             <dd class="govuk-summary-list__value">
-              {{ data['hcp-1-name'] }}
+              {{ data['professional-name-1'] | capitalize }}
+              <!-- Approximate start date: {{ data['condition-date-1'] | capitalize }} -->
             </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Profession
-            </dt>
-            <dd class="govuk-summary-list__value">
-              {{ data['hcp-1-profession'] }}
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Phone number
-            </dt>
-            <dd class="govuk-summary-list__value">
-              {{ data['hcp-1-phone'] }}
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="./health-professional">
+                Change<span class="govuk-visually-hidden"> Name </span>
+              </a>
             </dd>
           </div>
           <div class="govuk-summary-list__row">
@@ -111,33 +45,23 @@
               Address
             </dt>
             <dd class="govuk-summary-list__value">
-              {{ data['hcp-1-address-line-1'] }}<br>
-              {{ data['hcp-1-address-line-2'] }}<br>
-              {{ data['hcp-1-address-town'] }}<br>
-              {{ data['hcp-1-address-county'] }}<br>
-              {{ data['hcp-1-address-postcode'] }}<br>
+              {{ data['professional-address-line-1-1'] | capitalize }}
             </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Last contact
-            </dt>
-            <dd class="govuk-summary-list__value">
-              {{ data['hcp-1-last-contact'] }}
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="./condition-details">
+                Change<span class="govuk-visually-hidden"> condition details</span>
+              </a>
             </dd>
           </div>
         </dl>
       </div>
     </div>
-    {% if data['professional2'] === 'Yes' %}
+
+    {% if data['condition2'] === 'Yes' %}
     <div class="govuk-summary-card">
       <div class="govuk-summary-card__title-wrapper">
-        <h2 class="govuk-summary-card__title">{{ data['hcp-2-name'] }}</h2>
+        <h2 class="govuk-summary-card__title">{{ data['condition-name-2'] | capitalize }}</h2>
         <ul class="govuk-summary-card__actions">
-          <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">
-              Change<span class="govuk-visually-hidden"> of {{ data['hcp-1-name'] }}</span>
-            </a>
-          </li>
           <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">
               Remove<span class="govuk-visually-hidden"> {{ data['hcp-1-name'] }}</span>
             </a>
@@ -148,60 +72,41 @@
         <dl class="govuk-summary-list">
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Name
+              Condition or disability
             </dt>
             <dd class="govuk-summary-list__value">
-              {{ data['hcp-2-name'] }}
+              {{ data['condition-name-2'] | capitalize }} <br/>
+              Approximate start date: {{ data['condition-date-2'] | capitalize }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="./condition2">
+                Change<span class="govuk-visually-hidden"> condition or disability</span>
+              </a>
             </dd>
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Profession
+              About this condition or disability
             </dt>
             <dd class="govuk-summary-list__value">
-              {{ data['hcp-2-profession'] }}
+              {{ data['condition-detail-2'] | capitalize }}
             </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Phone number
-            </dt>
-            <dd class="govuk-summary-list__value">
-              {{ data['hcp-2-phone'] }}
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Address
-            </dt>
-            <dd class="govuk-summary-list__value">
-              {{ data['hcp-2-address-line-1'] }}<br>
-              {{ data['hcp-2-address-line-2'] }}<br>
-              {{ data['hcp-2-address-town'] }}<br>
-              {{ data['hcp-2-address-county'] }}<br>
-              {{ data['hcp-2-address-postcode'] }}<br>
-              {{ data['hcp-2-address-country'] }}<br>
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Last contact
-            </dt>
-            <dd class="govuk-summary-list__value">
-              {{ data['hcp-2-last-contact'] }}
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="./condition-details-2">
+                Change<span class="govuk-visually-hidden"> condition details</span>
+              </a>
             </dd>
           </div>
         </dl>
       </div>
-    
+    </div>
     {% endif %}
 
-    <p><a href="#">Add another health or care professional</a></p>
-    {% endif %}
+    <p><a href="../about-your-health/condition.html">Add another condition or disability</a></p>
 
-    <p><a href="../task-list?aboutyourhealthprofessionals=completed" class="govuk-button">Confirm and save</a></p>
+    <p><a href="../task-list?aboutyourhealth=completed" class="govuk-button">Confirm and save</a></p>
 
-    <!-- <p><a href="../task-list?aboutyourhealthprofessionals=completed" class="govuk-button">Confirm and save</a></p> -->
+    <!-- <p><a href="../task-list?aboutyourhealth=completed" class="govuk-button">Confirm and save</a></p> -->
 
   </div><!-- govuk-grid-column-two-thirds -->
 </div><!-- govuk-grid-row -->
