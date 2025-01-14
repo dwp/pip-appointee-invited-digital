@@ -1,0 +1,133 @@
+{% set pageTitle = "Check your answers: dressing and undressing" %}
+
+{% extends "apply-for-pip/includes/layout-signed-in-pip2.html" %}
+
+{% block beforeContent %}
+  {% include "apply-for-pip/includes/phase-banner.html" %}
+  {% include "apply-for-pip/includes/back-link.html" %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form id="form" method="post" action="#">
+
+      <h1 class="govuk-heading-l">Check details before saving the record </h1>
+      
+
+      {# Claimant Details Summary List #}
+      {{ govukSummaryList({
+          rows: [
+              {
+                  key: {
+                      text: "National insurance number"
+                  },
+                  value: {
+                      text: 'AB 11 22 33 C'
+                  },
+                  actions: {
+                      items: [{
+                          href: "#",
+                          text: "",
+                          visuallyHiddenText: ""
+                      }]
+                  }
+              },
+              {
+                  key: {
+                      text: "First name"
+                  },
+                  value: {
+                      text:'Waylon'
+                  },
+                  actions: {
+                      items: [{
+                          href: "./details",
+                          text: ""
+                      }]
+                  }
+              },
+              {
+                  key: {
+                      text: "Last name"
+                  },
+                  value: {
+                      text: 'Smithers'
+                  },
+                  actions: {
+                      items: [{
+                          href: "./details",
+                          text: ""
+                      }]
+                  }
+              },
+              {
+                  key: {
+                      text: "Email address"
+                  },
+                  value: {
+                      text: 'waylon.smithers@gmail.com'
+                  },
+                  actions: {
+                      items: [{
+                          href: "./details",
+                          text: ""
+                      }]
+                  }
+              },
+              {
+                  key: {
+                      text: "Date of birth"
+                  },
+                  value: {
+                      text: '12 January 1906'
+                  },
+                  actions: {
+                      items: [{
+                          href: "./details",
+                          text: ""
+                      }]
+                  }
+              },
+              {
+                  key: {
+                      text: "Postcode"
+                  },
+                  value: {
+                      text: 'SW9 6GR'
+                  },
+                  actions: {
+                      items: [{
+                          href: "./details",
+                          text: ""
+                      }]
+                  }
+              },
+              {
+                  key: {
+                      text: "Mobile number"
+                  },
+                  value: {
+                      text: '07876543210'
+                  },
+                  actions: {
+                      items: [{
+                          href: "./details",
+                          text: ""
+                      }]
+                  }
+              }
+          ]
+      }) }}
+
+      <p><a href="/v22/agent-ui-rep/claimant-details.html" >Change</a></p> 
+    
+
+      <a href="confirmation.html" class="govuk-button">Save record and send email </a>
+    
+    
+  </div><!-- govuk-grid-column-two-thirds -->
+</div><!-- govuk-grid-row -->
+{% endblock %}
