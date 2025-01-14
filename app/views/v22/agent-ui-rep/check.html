@@ -1,0 +1,135 @@
+{% set pageTitle = "Check your answers: dressing and undressing" %}
+
+{% extends "apply-for-pip/includes/layout-signed-in-pip2.html" %}
+
+{% block beforeContent %}
+{% include "apply-for-pip/includes/phase-banner.html" %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">Check the details before saving the record</h1>
+
+
+    {# Claimant Details Summary List #}
+    {{ govukSummaryList({
+        rows: [
+            {
+                key: {
+                    text: "National insurance number"
+                },
+                value: {
+                    text: data['claimant-ni']
+                },
+                actions: {
+                    items: [{
+                        href: "#",
+                        text: "",
+                        visuallyHiddenText: ""
+                    }]
+                }
+            },
+            
+            {
+                key: {
+                    text: "First name"
+                },
+                value: {
+                    text: data['claimant-first-name']
+                },
+                actions: {
+                    items: [{
+                        href: "./details",
+                        text: ""
+                    }]
+                }
+            },
+            
+            {
+                key: {
+                    text: "Last name"
+                },
+                value: {
+                    html: data['claimant-last-name']
+                },
+                actions: {
+                    items: [{
+                        href: "./details",
+                        text: ""
+                    }]
+                }
+            },
+            
+            {
+                key: {
+                    text: "Email address"
+                },
+                value: {
+                    html: data['claimant-email']
+                },
+                actions: {
+                    items: [{
+                        href: "./details",
+                        text: ""
+                    }]
+                }
+            },
+            
+            {
+                key: {
+                    text: "Date of birth"
+                },
+                value: {
+                    html: data['claimant-dob']
+                },
+                actions: {
+                    items: [{
+                        href: "./details",
+                        text: ""
+                    }]
+                }
+            },
+            
+            {
+                key: {
+                    text: "Postcode"
+                },
+                value: {
+                    html: data['claimant-postcode']
+                },
+                actions: {
+                    items: [{
+                        href: "./details",
+                        text: ""
+                    }]
+                }
+            },
+            
+            {
+                key: {
+                    text: "Mobile number"
+                },
+                value: {
+                    html: data['claimant-mobile']
+                },
+                actions: {
+                    items: [{
+                        href: "./details",
+                        text: ""
+                    }]
+                }
+            }
+        ]
+    }) }}
+
+<p> 
+    <a href="/v22/agent-ui-rep/claimant-details">Change</a>
+</p>
+    <a href="confirmation.html" class="govuk-button">Save record and send email</a>
+    </form>
+  </div><!-- govuk-grid-column-two-thirds -->
+</div><!-- govuk-grid-row -->
+{% endblock %}

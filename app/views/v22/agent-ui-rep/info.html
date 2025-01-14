@@ -1,0 +1,28 @@
+{% block pageTitle %}
+Start
+{% endblock %}
+
+{% extends "apply-for-pip/includes/layout-signed-in-pip1.html" %}
+
+{% block beforeContent %}
+  {% include "apply-for-pip/includes/phase-banner.html" %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form id="form" method="post" action="/agent-ui/info">
+        <h1 class="govuk-heading-l">
+          Send an invitation to complete PIP2 online</h1>
+
+        <p>Send this invitation if they have completed PIP1 over the phone.</p>
+       
+        <a href="/v22/agent-ui-rep/claimant-details.html" class="govuk-button">Continue</a>
+
+        </form>
+    </div> <!-- govuk-grid-column-two-thirds -->
+</div> <!-- govuk-grid-column-two-thirds -->
+
+
+{% endblock %}

@@ -1,0 +1,57 @@
+{% set pageTitle = "Does your condition affect you dressing or undressing?" %}
+
+{% extends "apply-for-pip/includes/layout-signed-in-pip2.html" %}
+
+{% block beforeContent %}
+  {% include "apply-for-pip/includes/phase-banner.html" %}
+  {% include "apply-for-pip/includes/back-link.html" %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="#" method="post" novalidate>
+
+      {{ govukRadios({
+        classes: "govuk-radios--inline",
+        name: "appointee-question",
+        fieldset: {
+          legend: {
+            text: "Does the claimant have an appointee?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+          }
+        },
+        text: {
+          text: "An appointee is officially appointed by DWP and acts on behalf of the claimant. They are responsible for applying for PIP and managing the claim."
+        },   hint: {
+          html: "<p>An appointee is officially appointed by DWP and acts on behalf of the claimant. They are responsible for applying for PIP and managing the claim.</p>
+         "
+        },
+        items: [
+          {
+            value: "Yes",
+            text: "Yes",
+            checked: checked("appointee-question", "Yes")
+          },
+          {
+            value: "No",
+            text: "No",
+            checked: checked("appointee-question", "No")
+          }
+        ]
+      }) }}
+
+
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+
+    </form>
+
+
+  </div><!-- govuk-grid-column-two-thirds -->
+</div><!-- govuk-grid-row -->
+{% endblock %}
