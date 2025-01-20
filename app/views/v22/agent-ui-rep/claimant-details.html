@@ -28,9 +28,9 @@
         name: "claimant-ni",
         label: {
           html: 'National Insurance number',
-          classes: 'govuk-!-font-weight-bold',
-          value: "{{data['claimant-ni']}}"
+          classes: 'govuk-!-font-weight-bold'
         },
+        value: data['search-number'],
         hint: {
           text: "It's on their National Insurance card, benefit letter, payslip or P60. For example, 'QQ 12 34 56 C'."
         }
@@ -44,6 +44,7 @@
           html: 'First name',
           classes: 'govuk-!-font-weight-bold'
         },
+        value: data['claimant-first-name'],
         hint: {
           text: "Include capital letters in the name where needed. For example, Janet."
         }
@@ -57,6 +58,7 @@
           html: 'Last name',
           classes: 'govuk-!-font-weight-bold'
         },
+        value: data['claimant-last-name'],
         hint: {
           text: "Include capital letters in the name where needed. For example, Smith-Johnson."
         }
@@ -71,6 +73,10 @@
       label: {
         html: 'Email address',
         classes: 'govuk-!-font-weight-bold'
+      },
+      value: data['claimant-email'],
+      hint: {
+        text: ""
       }
     }) }}
 
@@ -85,10 +91,13 @@
       classes: "govuk-fieldset__legend--s"
     }
   },
+  value: data['claimant-dob'],
   hint: {
     text: "For example, 27 3 1981"
   }
 }) }}
+
+
 {{ govukInput({
   id: 'claimant-postcode',
   name: 'claimant-postcode',
@@ -106,6 +115,10 @@
   label: {
     html: 'Mobile number',
     classes: 'govuk-!-font-weight-bold'
+  },
+  value: data['claimant-mobile'],
+  hint: {
+    text: ""
   }
 }) }}
 
