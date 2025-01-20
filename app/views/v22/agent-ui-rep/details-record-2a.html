@@ -1,3 +1,4 @@
+
 {% set pageTitle = "Check your answers: dressing and undressing" %}
 
 {% extends "apply-for-pip/includes/layout-signed-in-pip2.html" %}
@@ -9,16 +10,46 @@
 
 {% block content %}
 
+{{ govukInsetText({
+
+    html: "You are viewing version 2a, <a href='details-record-2b.html' class='govuk-link'>swap to 2b </a>"
+  }) }}
+
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
     <form id="form" method="post" action="#">
 
-
-      <h1 class="govuk-heading-l">Check the claimant details and send email</h1>
+      <h1 class="govuk-heading-l govuk-!-margin-bottom-3">Check the claimant details and send email</h1>
       
       <p class="govuk-paragraph"> To move the claimant into the invited digital process, check and confirm the details on their record and send email.</p>
-      
+
+      <h2 class="govuk-heading-l govuk-!-margin-bottom-2">Service type </h2>
+
+      {# Claimant Details Summary List #}
+      {{ govukSummaryList({
+          rows: [
+              {
+                  key: {
+                      text: "Service type offered"
+                  },
+                  value: {
+                      text: 'Only PIP 2 Online'
+                  },
+                  actions: {
+                      items: [{
+                          href: "#",
+                          text: "",
+                          visuallyHiddenText: ""
+                      }]
+                  }
+              }
+            ]
+      }) }}
+
+    
+
+      <h2 class="govuk-heading-l govuk-!-margin-bottom-2">Details </h2>
 
       {# Claimant Details Summary List #}
       {{ govukSummaryList({
@@ -48,7 +79,7 @@
                   actions: {
                       items: [{
                           href: "./details",
-                          text: ""
+                          text: "Change"
                       }]
                   }
               },
@@ -62,7 +93,7 @@
                   actions: {
                       items: [{
                           href: "./details",
-                          text: ""
+                          text: "Change"
                       }]
                   }
               },
@@ -76,7 +107,7 @@
                   actions: {
                       items: [{
                           href: "./details",
-                          text: ""
+                          text: "Change"
                       }]
                   }
               },
@@ -90,7 +121,7 @@
                   actions: {
                       items: [{
                           href: "./details",
-                          text: ""
+                          text: "Change"
                       }]
                   }
               },
@@ -104,7 +135,7 @@
                   actions: {
                       items: [{
                           href: "./details",
-                          text: ""
+                          text: "Change"
                       }]
                   }
               },
@@ -118,42 +149,21 @@
                   actions: {
                       items: [{
                           href: "./details",
-                          text: ""
+                          text: "Change"
                       }]
                   }
               }
           ]
       }) }}
 
-      <h2 class="govuk-heading-l govuk-!-margin-bottom-2">Service type </h2>
 
-      {# Claimant Details Summary List #}
-      {{ govukSummaryList({
-          rows: [
-              {
-                  key: {
-                      text: "Service type offered"
-                  },
-                  value: {
-                      text: 'Only PIP 2 Online'
-                  },
-                  actions: {
-                      items: [{
-                          href: "#",
-                          text: "",
-                          visuallyHiddenText: ""
-                      }]
-                  }
-              }
-            ]
-      }) }}
 
-      <p><a href="/v22/agent-ui-rep/claimant-details.html" >Change details</a></p> 
-    
 
       <a href="confirmation.html" class="govuk-button">Confirm and send email</a>
     
-    
+
+      <!-- <p><a href="/v22/agent-ui-rep/claimant-details.html" >Change</a></p>  -->
+      
   </div><!-- govuk-grid-column-two-thirds -->
 </div><!-- govuk-grid-row -->
 {% endblock %}

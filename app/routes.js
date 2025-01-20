@@ -89,6 +89,7 @@ const additionalSupportConditionv14 = require('./routes/additional-support-condi
 const pipAppPart2 = require('./routes/pip2.js')
 const eligibility = require('./routes/eligibility.js')
 const agentUiRep = require('./routes/agent-ui-rep.js')
+const agentUiRepData = require('./routes/agent-ui-rep-data.js')
 
 // ROUTES REDIRECT END
 
@@ -154,6 +155,7 @@ additionalSupportConditionv14(router);
 pipAppPart2(router);
 eligibility(router);
 agentUiRep(router);
+agentUiRepData(router);
 
 router.use('/', authRoutes)
 router.use('/', idvRoutes)
