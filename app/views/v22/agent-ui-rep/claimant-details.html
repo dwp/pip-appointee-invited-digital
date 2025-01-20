@@ -91,7 +91,24 @@
       classes: "govuk-fieldset__legend--s"
     }
   },
-  value: data['claimant-dob'],
+  items:
+  [
+    {
+      classes: "govuk-input--width-2",
+      name: "day",
+      value: "12"
+    },
+    {
+      classes: "govuk-input--width-2",
+      name: "month",
+      value: "1"
+    },
+    {
+      classes: "govuk-input--width-4",
+      name: "year",
+      value: "1946"
+    }
+  ],
   hint: {
     text: "For example, 27 3 1981"
   }
@@ -105,7 +122,8 @@
   label: {
     html: 'Postcode',
     classes: 'govuk-!-font-weight-bold'
-  }
+  },
+  value: data['claimant-postcode']
 }) }}
 
 {{ govukInput({
