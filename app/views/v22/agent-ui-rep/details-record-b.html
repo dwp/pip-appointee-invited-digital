@@ -9,10 +9,6 @@
 
 {% block content %}
 
-{{ govukInsetText({
-
-    html: "You are viewing version 1a, <a href='details-record-2b.html' class='govuk-link'>swap to 1b </a>"
-  }) }}
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
@@ -22,8 +18,33 @@
 
       <h1 class="govuk-heading-l">Check the claimant details and send email</h1>
       
-      <p class="govuk-paragraph"> To move the claimant into the invited digital process, check and confirm the details on their record and send email.</p>
-      
+      <p class="govuk-paragraph">So that the claimant can apply again online, confirm their details and send email.
+    </p>
+
+      <h2 class="govuk-heading-l govuk-!-margin-bottom-2">Service type </h2>
+
+      {# Claimant Details Summary List #}
+      {{ govukSummaryList({
+          rows: [
+              {
+                  key: {
+                      text: "Service type offered"
+                  },
+                  value: {
+                      text: 'Apply again online'
+                  },
+                  actions: {
+                      items: [{
+                          href: "#",
+                          text: "",
+                          visuallyHiddenText: ""
+                      }]
+                  }
+              }
+            ]
+      }) }}
+
+      <h2 class="govuk-heading-l govuk-!-margin-bottom-2">Details</h2>
 
       {# Claimant Details Summary List #}
       {{ govukSummaryList({
@@ -130,30 +151,7 @@
           ]
       }) }}
 
-      <h2 class="govuk-heading-l govuk-!-margin-bottom-2">Service type </h2>
-
-      {# Claimant Details Summary List #}
-      {{ govukSummaryList({
-          rows: [
-              {
-                  key: {
-                      text: "Service type offered"
-                  },
-                  value: {
-                      text: 'Apply again online'
-                  },
-                  actions: {
-                      items: [{
-                          href: "#",
-                          text: "",
-                          visuallyHiddenText: ""
-                      }]
-                  }
-              }
-            ]
-      }) }}
-
-
+     
     
 
       <a href="confirmation-b" class="govuk-button">Confirm and send email</a>
