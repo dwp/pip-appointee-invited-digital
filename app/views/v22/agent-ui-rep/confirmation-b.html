@@ -11,18 +11,11 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <!-- <div class="govuk-inset-text">    <p>You are viewing version A of this page. <a href="../health-form/confirmation-b.html" > Show version B</a> </p></div> -->
-
-    <div class="govuk-panel govuk-panel--confirmation">
-      <h1 class="govuk-panel__title">
-        Email sent to Janet Harding
-        <br>
-         janetharding@gmail.com
-      </h1>
-
-      <div class="govuk-panel__body">
-        {{data['appointee-email']}}
-      </div>
-    </div>
+    {{ govukPanel({
+      titleText: "Email sent to Janet Harding",
+      html: '<span class="govuk-!-colour-white govuk-!-font-size-19">janetharding@gmail.com</span>',
+      classes: "govuk-!-colour-white"
+     }) }}
 
     <a href="search.html" class="govuk-button govuk-button"> Back to search</a>
       
