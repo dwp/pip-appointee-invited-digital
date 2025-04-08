@@ -14,11 +14,8 @@
     <form action="confirmation" id="form" method="post">
 
 
-      <h1 class="govuk-heading-xl">Check the claimant details and re-send email</h1>
-      
-      <p class="govuk-paragraph">...</p>
+      <h1 class="govuk-heading-xl">Check claimant details and re-send invitation email</h1>
 
-      <h2 class="govuk-heading-l govuk-!-margin-bottom-2">Details</h2>
 
       {# Claimant Details Summary List #}
       {{ govukSummaryList({
@@ -125,12 +122,12 @@
           ]
       }) }}
 
-     
-    
+
+
       <button class="govuk-button" data-module="govuk-button">Confirm and re-send email</button>
 
     </form>
-    
+
   </div><!-- govuk-grid-column-two-thirds -->
 </div><!-- govuk-grid-row -->
 {% endblock %}
