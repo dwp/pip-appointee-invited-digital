@@ -16,7 +16,7 @@
       {% call govukFieldset({
         legend: {
           text: 'Enter claimant details',
-          classes: "govuk-fieldset__legend--l",
+          classes: "govuk-fieldset__legend--xl",
           isPageHeading: true
         }
       }) %}
@@ -29,7 +29,7 @@
           html: 'National Insurance number',
           classes: 'govuk-!-font-weight-bold'
         },
-        value: data['search-number'],
+        value: 'AB 11 22 33 C',
         hint: {
           text: "It's on their National Insurance card, benefit letter, payslip or P60. For example, 'QQ 12 34 56 C'."
         }
@@ -43,7 +43,7 @@
           html: 'First name',
           classes: 'govuk-!-font-weight-bold'
         },
-        value: data['claimant-first-name'],
+        value: 'John',
         hint: {
           text: "Include capital letters in the name where needed. For example, Janet."
         }
@@ -57,7 +57,7 @@
           html: 'Last name',
           classes: 'govuk-!-font-weight-bold'
         },
-        value: data['claimant-last-name'],
+        value: 'Smith',
         hint: {
           text: "Include capital letters in the name where needed. For example, Smith-Johnson."
         }
@@ -73,7 +73,7 @@
         html: 'Email address',
         classes: 'govuk-!-font-weight-bold'
       },
-      value: data['claimant-email'],
+      value: 'johnsmith2233@gmail.com',
       hint: {
         text: ""
       }
@@ -122,7 +122,7 @@
     html: 'Postcode',
     classes: 'govuk-!-font-weight-bold'
   },
-  value: data['claimant-postcode']
+  value: 'SR11 9TH'
 }) }}
 
 {{ govukInput({
@@ -133,7 +133,7 @@
     html: 'Mobile number',
     classes: 'govuk-!-font-weight-bold'
   },
-  value: data['claimant-mobile'],
+  value: '07755546778',
   hint: {
     text: ""
   }
@@ -145,7 +145,7 @@
 
       {{ govukButton({
         text: "Save and continue",
-        href: "/v22/agent-ui-rep/details-record-b",
+        href: "confirm-details",
         type: "submit"
       }) }}
 
