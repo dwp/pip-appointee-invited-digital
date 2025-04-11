@@ -1,0 +1,29 @@
+{% set pageTitle = "Search results" %}
+
+{% extends "v24-1/includes/layout.html" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form method="post" action="confirm-details">
+
+      <div>
+        <h1 class="govuk-heading-xl">
+          John Smith
+          <span class="govuk-caption-l">AB 11 22 33 C	</span>
+          <strong class="govuk-tag govuk-tag--red">
+            Active award
+          </strong>
+        </h1>
+      </div>
+      <p class="govuk-body">This claimant cannot apply online right now. Their award has more than 6 months remaining.</p>
+    </form>
+
+    <a href="search" class="govuk-body">Back to search</a>
+
+  </div>
+
+
+
+  {% endblock %}

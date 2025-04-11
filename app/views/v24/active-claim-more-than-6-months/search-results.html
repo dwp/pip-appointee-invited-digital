@@ -1,0 +1,43 @@
+{% set pageTitle = "Search results" %}
+
+{% extends "v24/includes/layout.html" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form method="post" action="confirm-details">
+
+      <h1 class="govuk-heading-xl">
+        Record found</h1>
+
+
+        <table class="govuk-table">
+        
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Name</th>
+              <td class="govuk-table__cell">John Smith</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">National Insurance number</th>
+              <td class="govuk-table__cell">AA 11 22 33 D</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Status</th>
+              <td class="govuk-table__cell">Active award</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>This claimant cannot apply online right now. Their award has more than 6 months remaining.</p>
+<a href="search" class="govuk-body">Back to search</a>
+    </div>
+    </form>
+
+  
+
+  </div>
+
+
+
+  {% endblock %}
