@@ -1,0 +1,40 @@
+{% set pageTitle = "Search results" %}
+
+{% extends "v24-1/includes/layout.html" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <form method="post" action="confirm-details">
+
+      <div>
+        <h1 class="govuk-heading-xl">
+          John Smith
+
+          <span class="govuk-caption-l">
+            AB 11 22 33 C
+          </span>
+          <strong class="govuk-tag govuk-tag--green">
+            Can apply online
+          </strong>
+          </h1>
+
+          <p class="govuk-body">You can:</p>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>send a new 'health information gather' online form</li>
+
+  </ul>
+
+      </div>
+      <br>
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+    </form>
+    <br>
+    <a href="search" class="govuk-body">Back to search</a>
+
+  </div>
+
+
+
+  {% endblock %}
