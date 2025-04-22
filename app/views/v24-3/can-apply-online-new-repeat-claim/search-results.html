@@ -1,0 +1,47 @@
+{% set pageTitle = "Search results" %}
+
+{% extends "v24/includes/layout.html" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form method="post" action="confirm-details">
+
+      <div>
+        <h1 class="govuk-heading-xl">
+          Record found</h1>
+
+
+          <table class="govuk-table">
+          
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Name</th>
+                <td class="govuk-table__cell">John Smith</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">National Insurance number</th>
+                <td class="govuk-table__cell">AA 11 22 33 D</td>
+              </tr>
+            
+            </tbody>
+          </table>
+          <p class="govuk-body">You can:</p>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>send a new 'health information gather' online form</li>
+
+  </ul>
+
+      </div>
+      <br>
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+    </form>
+    
+    <a href="search" class="govuk-body">Back to search</a>
+
+  </div>
+
+
+
+  {% endblock %}
