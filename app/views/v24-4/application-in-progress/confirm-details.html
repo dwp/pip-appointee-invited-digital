@@ -15,124 +15,95 @@
 
       <h1 class="govuk-heading-xl">Update details or re-send invitation email</h1>
       
-      {# Claimant Details Summary List #}
-      {{ govukSummaryList({
-          rows: [
-          {
-            key: {
-                text: "Can we send a new online application form?"
-            },
-            value: {
-                text: "No"
-            },
-            actions: {
-                items: [{
-                    href: "change-details",
-                    text: "Change"
-                }]
-            }
-        },
-              {
-                key: {
-                    text: "National Insurance number"
-                },
-                value: {
-                    text: "AA 11 22 33 D"
-                },
-                actions: {
-                    items: [{
-                        href: "change-details",
-                        text: "Change"
-                    }]
-                }
-            },
-              {
-                  key: {
-                      text: "First name"
-                  },
-                  value: {
-                      text: "John"
-                  },
-                  actions: {
-                      items: [{
-                          href: "change-details",
-                          text: "Change"
-                      }]
-                  }
-              },
-              {
-                  key: {
-                      text: "Last name"
-                  },
-                  value: {
-                      text: "Smith"
-                  },
-                  actions: {
-                      items: [{
-                          href: "change-details",
-                          text: "Change"
-                      }]
-                  }
-              },
-              {
-                  key: {
-                      text: "Email address"
-                  },
-                  value: {
-                      text: "johnsmith2233@gmail.com"
-                  },
-                  actions: {
-                      items: [{
-                          href: "change-details",
-                          text: "Change"
-                      }]
-                  }
-              },
-              {
-                  key: {
-                      text: "Date of birth"
-                  },
-                  value: {
-                      text: '12 January 1946'
-                  },
-                  actions: {
-                      items: [{
-                          href: "change-details",
-                          text: "Change"
-                      }]
-                  }
-              },
-              {
-                  key: {
-                      text: "Postcode"
-                  },
-                  value: {
-                      text: "SR11 9TH"
-                  },
-                  actions: {
-                      items: [{
-                          href: "change-details",
-                          text: "Change"
-                      }]
-                  }
-              },
-              {
-                  key: {
-                      text: "Mobile number"
-                  },
-                  value: {
-                      text: "07755546778"
-                  },
-                  actions: {
-                      items: [{
-                          href: "change-details",
-                          text: "Change"
-                      }]
-                  }
-              }
-          ]
-      }) }}
-
+      <dl class="govuk-summary-list ">
+        <div class="govuk-summary-list__row" >
+          <dt class="govuk-summary-list__key">
+            Can we send a new online application form?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            No
+          </dd>
+          <dd class="govuk-summary-list__actions">
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row" >
+          <dt class="govuk-summary-list__key">
+            National Insurance number
+          </dt>
+          <dd class="govuk-summary-list__value">
+            AA 11 22 33 D
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="change-details">Change<span class="govuk-visually-hidden"> date of birth</span></a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            First name
+          </dt>
+          <dd class="govuk-summary-list__value">
+            John
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="change-details">Change<span class="govuk-visually-hidden"> customer reference</span></a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Last name
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Smith
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="change-details">Change<span class="govuk-visually-hidden"> address</span></a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Email address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p class="govuk-body">	johnsmith2233@gmail.com</p>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="change-details">Change<span class="govuk-visually-hidden"> contact details</span></a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+                Date of birth	
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <p class="govuk-body">		12 January 1946</p>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="change-details">Change<span class="govuk-visually-hidden"> contact details</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+                Postcode	
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <p class="govuk-body">	SR11 9TH</p>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="change-details">Change<span class="govuk-visually-hidden"> contact details</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+                Mobile number		
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <p class="govuk-body">07755546778</p>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="change-details">Change<span class="govuk-visually-hidden"> contact details</span></a>
+            </dd>
+          </div>
+</dl>
 <br>
 
       <button class="govuk-button" data-module="govuk-button">Confirm and re-send email</button>
