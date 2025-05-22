@@ -118,14 +118,28 @@
                           text: "Change"
                       }]
                   }
-              }
+              },
+              {
+                key: {
+                    text: "Language they want to continue their application in"
+                },
+                value: {
+                    text: "English"
+                },
+                actions: {
+                    items: [{
+                        href: "change-details",
+                        text: "Change"
+                    }]
+                }
+            }
           ]
       }) }}
 
 
 
       <button class="govuk-button" data-module="govuk-button">Confirm and re-send email</button>
-
+      <br><a href="search" class="govuk-body">Search again</a>
     </form>
 
   </div><!-- govuk-grid-column-two-thirds -->
